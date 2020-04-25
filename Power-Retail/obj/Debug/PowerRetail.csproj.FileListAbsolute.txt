@@ -1,0 +1,13 @@
+\\tsclient\D\My Data\Job\PowerRetail\Code\PowerRetail\bin\Debug\PowerRetail.exe.config
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\bin\Debug\PowerRetail.exe.config
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\bin\Debug\PowerRetail.exe
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\bin\Debug\PowerRetail.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\PowerRetail.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\PowerRetail.MainForm.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\PowerRetail.Properties.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\PowerRetail.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\PowerRetail.exe
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\PowerRetail.pdb
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\PowerRetail.Form1.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\PowerRetail.Splash.resources
+C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\PowerRetail.Login.resources
