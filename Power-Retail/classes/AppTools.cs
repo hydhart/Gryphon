@@ -9,21 +9,16 @@ namespace PowerRetail.classes
 {
     public static class AppTools
     {
-        public static Form GetFormByName(string name)
+        public static Form GetFormByName(string frmname)
         {
-            System.Reflection.Assembly myAssembly = System.Reflection.Assembly.GetExecutingAssembly();
-            foreach (Type type in myAssembly.GetTypes())
-            {
-                if (type.BaseType != null && type.BaseType.FullName == "System.Windows.Forms.Form")
-                {
-                    if (type.Name == name)
-                    {
-                        Form form = Activator.CreateInstance(Type.GetType(name)) as Form;
-                        return form;
-                    }
-                }
-            }
-            return null;
+            var formType = System.Reflection.Assembly.GetExecutingAssembly().GetTypes()
+                .Where(a => a.BaseType == typeof(Form) && a.Name == frmname)
+                .FirstOrDefault();
+
+            if (formType == null) // If there is no form with the given frmname
+                return null;
+
+            return (Form)Activator.CreateInstance(formType);
         }
     }
 }

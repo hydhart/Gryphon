@@ -8,8 +8,6 @@ namespace PowerRetail
 {
     public partial class MainForm : Form
     {
-        SqlConnection myDBConnection = null;
-
         public MainForm()
         {
             Application.Run(new Splash());
@@ -17,7 +15,6 @@ namespace PowerRetail
 
             InitializeComponent();
 
-            //ConstructMenu();
             AppMenu.ConstructMenu(this);
             ConstructLogo();
         }
@@ -39,133 +36,6 @@ namespace PowerRetail
             PanelLogo.Controls.Add(PicLogo);            
         }
 
-        private void ConstructMenu()
-        {
-            Panel panelSubmenu;
-            Button btnMenu;
-            Button btnSubmenu;
-
-            // POS Menu
-            panelSubmenu = new Panel();
-            panelSubmenu.Parent = panelLeft;
-            panelSubmenu.Name = "Panel002";
-            panelSubmenu.Dock = DockStyle.Top;
-            panelSubmenu.Tag = "002000";
-            panelSubmenu.AutoSize = true;
-            panelSubmenu.Visible = false;
-            panelLeft.Controls.Add(panelSubmenu);
-
-            btnMenu = new Button();
-            btnMenu.Parent = panelLeft;
-            btnMenu.Name = "Btn002";
-            btnMenu.Text = "POS";
-            btnMenu.Tag = "002000";
-            btnMenu.Dock = DockStyle.Top;
-            btnMenu.FlatStyle = FlatStyle.Flat;
-            btnMenu.FlatAppearance.BorderSize = 0;
-            btnMenu.BackColor = Color.Gray;
-            btnMenu.ForeColor = Color.White;
-            btnMenu.Font = new Font(new FontFamily("Microsoft Sans Serif"), 10, FontStyle.Bold);
-            btnMenu.TextAlign = ContentAlignment.MiddleLeft;
-            btnMenu.Size = new Size(200, 40);
-            btnMenu.Click += new EventHandler(btnMenuClicked);
-            panelLeft.Controls.Add(btnMenu);
-
-            btnSubmenu = new Button();
-            btnSubmenu.Parent = panelSubmenu;
-            btnSubmenu.Name = "Btn002002";
-            btnSubmenu.Text = "POS 002002";
-            btnSubmenu.Tag = "002002";
-            btnSubmenu.Dock = DockStyle.Top;
-            btnSubmenu.FlatStyle = FlatStyle.Flat;
-            btnSubmenu.FlatAppearance.BorderSize = 0;
-            btnSubmenu.BackColor = Color.Silver;
-            btnSubmenu.ForeColor = Color.White;
-            btnSubmenu.Font = new Font(new FontFamily("Microsoft Sans Serif"), 9, FontStyle.Bold);
-            btnSubmenu.TextAlign = ContentAlignment.MiddleLeft;
-            btnSubmenu.Padding = new Padding(15, 0, 0, 0);
-            btnSubmenu.Size = new Size(200, 30);
-            btnSubmenu.Click += new EventHandler(btnSubmenuClicked);
-            panelSubmenu.Controls.Add(btnSubmenu);
-
-            btnSubmenu = new Button();
-            btnSubmenu.Parent = panelSubmenu;
-            btnSubmenu.Name = "Btn002001";
-            btnSubmenu.Text = "POS 002001";
-            btnSubmenu.Tag = "002001";
-            btnSubmenu.Dock = DockStyle.Top;
-            btnSubmenu.FlatStyle = FlatStyle.Flat;
-            btnSubmenu.FlatAppearance.BorderSize = 0;
-            btnSubmenu.BackColor = Color.Silver;
-            btnSubmenu.ForeColor = Color.White;
-            btnSubmenu.Font = new Font(new FontFamily("Microsoft Sans Serif"), 9, FontStyle.Bold);
-            btnSubmenu.TextAlign = ContentAlignment.MiddleLeft;
-            btnSubmenu.Padding = new Padding(15, 0, 0, 0);
-            btnSubmenu.Size = new Size(200, 30);
-            btnSubmenu.Click += new EventHandler(btnSubmenuClicked);
-            panelSubmenu.Controls.Add(btnSubmenu);
-
-            // Back Office
-            panelSubmenu = new Panel();
-            panelSubmenu.Parent = panelLeft;
-            panelSubmenu.Name = "Panel001";
-            panelSubmenu.Dock = DockStyle.Top;
-            panelSubmenu.Tag = "001000";
-            panelSubmenu.AutoSize = true;
-            panelSubmenu.Visible = false;
-            panelLeft.Controls.Add(panelSubmenu);
-
-            btnMenu = new Button();
-            btnMenu.Parent = panelLeft;
-            btnMenu.Name = "Btn001";
-            btnMenu.Text = "Back Office";
-            btnMenu.Tag = "001000";
-            btnMenu.Dock = DockStyle.Top;
-            btnMenu.FlatStyle = FlatStyle.Flat;
-            btnMenu.FlatAppearance.BorderSize = 0;
-            btnMenu.BackColor = Color.Gray;
-            btnMenu.ForeColor = Color.White;
-            btnMenu.Font = new Font(new FontFamily("Microsoft Sans Serif"), 10, FontStyle.Bold);
-            btnMenu.TextAlign = ContentAlignment.MiddleLeft;
-            btnMenu.Size = new Size(200, 40);
-            btnMenu.Click += new EventHandler(btnMenuClicked);
-            panelLeft.Controls.Add(btnMenu);
-
-            btnSubmenu = new Button();
-            btnSubmenu.Parent = panelSubmenu;
-            btnSubmenu.Name = "Btn001002";
-            btnSubmenu.Text = "Back Office 001002";
-            btnSubmenu.Tag = "001002";
-            btnSubmenu.Dock = DockStyle.Top;
-            btnSubmenu.FlatStyle = FlatStyle.Flat;
-            btnSubmenu.FlatAppearance.BorderSize = 0;
-            btnSubmenu.BackColor = Color.Silver;
-            btnSubmenu.ForeColor = Color.White;
-            btnSubmenu.Font = new Font(new FontFamily("Microsoft Sans Serif"), 9, FontStyle.Bold);
-            btnSubmenu.TextAlign = ContentAlignment.MiddleLeft;
-            btnSubmenu.Padding = new Padding(15,0,0,0);
-            btnSubmenu.Size = new Size(200, 30);
-            btnSubmenu.Click += new EventHandler(btnSubmenuClicked);
-            panelSubmenu.Controls.Add(btnSubmenu);
-
-            btnSubmenu = new Button();
-            btnSubmenu.Parent = panelSubmenu;
-            btnSubmenu.Name = "Btn001001";
-            btnSubmenu.Text = "Back Office 001001";
-            btnSubmenu.Tag = "001001";
-            btnSubmenu.Dock = DockStyle.Top;
-            btnSubmenu.FlatStyle = FlatStyle.Flat;
-            btnSubmenu.FlatAppearance.BorderSize = 0;
-            btnSubmenu.BackColor = Color.Silver;
-            btnSubmenu.ForeColor = Color.White;
-            btnSubmenu.Font = new Font(new FontFamily("Microsoft Sans Serif"), 9, FontStyle.Bold);
-            btnSubmenu.TextAlign = ContentAlignment.MiddleLeft;
-            btnSubmenu.Padding = new Padding(15, 0, 0, 0);
-            btnSubmenu.Size = new Size(200, 30);
-            btnSubmenu.Click += new EventHandler(btnSubmenuClicked);
-            panelSubmenu.Controls.Add(btnSubmenu);
-        }
-
         public void btnMenuClicked(object sender, EventArgs eD)
         {
             Button button = sender as Button;
@@ -185,9 +55,8 @@ namespace PowerRetail
         {
             Button button = sender as Button;
             string formName = button.AccessibleName;
-            //var formChild = Activator.CreateInstance(Type.GetType(formName)) as Form;
-            showChildForm(AppTools.GetFormByName(formName)); // new Form1());
-            //MessageBox.Show(button.Tag.ToString());
+            showChildForm(AppTools.GetFormByName(formName));
+            //showChildForm(new ItemList());
         }
 
         private Form activeForm = null;
@@ -201,6 +70,15 @@ namespace PowerRetail
             activeForm.Dock = DockStyle.Fill;
             panelChildForm.Controls.Add(activeForm);
             activeForm.Show();
+        }
+
+        private void btnToggleHideShowMenu_Click(object sender, EventArgs e)
+        {
+            panelLeft.Visible = !panelLeft.Visible;
+            if (btnToggleHideShowMenu.Text.Equals("<"))
+                btnToggleHideShowMenu.Text = ">";
+            else
+                btnToggleHideShowMenu.Text = "<";
         }
     }
 }

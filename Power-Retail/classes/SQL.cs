@@ -32,7 +32,7 @@ namespace PowerRetail.classes
                 else
                     return false;
             }
-            catch (SqlException e)
+            catch
             {
                 return false;
             }
@@ -54,7 +54,7 @@ namespace PowerRetail.classes
                 else
                     return false;
             }
-            catch (SqlException e)
+            catch
             {
                 return false;
             }

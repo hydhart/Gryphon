@@ -7,8 +7,6 @@ namespace PowerRetail
 {
     public partial class Login : Form
     {
-        SqlConnection myDBConnection = null;
-
         public Login()
         {
             InitializeComponent();
@@ -35,7 +33,6 @@ namespace PowerRetail
                 else
                 {
                     labelMessageText.Text = "Invalid User ID or Password.";
-                    //Application.Exit();
                 }
                 SQL.CloseConnection();
             }

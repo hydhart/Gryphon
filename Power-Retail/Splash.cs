@@ -7,8 +7,6 @@ namespace PowerRetail
 {
     public partial class Splash : Form
     {
-        SqlConnection myDBConnection = null;
-        MainForm mainForm;
         Timer splashTimer;
         private const int SPLASH_DURATION = 10;
         private int tickCount;
@@ -24,7 +22,6 @@ namespace PowerRetail
         public Splash(Form main)
         {
             InitializeComponent();
-            mainForm = (MainForm) main;
             splashTimer = new Timer();
             splashTimer.Tick += new EventHandler(SplashTimer_Tick);
             splashTimer.Enabled = true;
