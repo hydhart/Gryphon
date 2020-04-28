@@ -12,7 +12,7 @@ namespace PowerRetail.classes
         public static Form GetFormByName(string frmname)
         {
             var formType = System.Reflection.Assembly.GetExecutingAssembly().GetTypes()
-                .Where(a => a.BaseType == typeof(Form) && a.Name == frmname)
+                .Where(a => a.BaseType == typeof(Form) && a.Name.ToLower() == frmname)
                 .FirstOrDefault();
 
             if (formType == null) // If there is no form with the given frmname

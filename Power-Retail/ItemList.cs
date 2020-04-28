@@ -18,7 +18,7 @@ namespace PowerRetail
         //private const string RIBBON_NAVIGATE = "#NAVIGATE";
         //private const string RIBBON_REPORT = "#REPORT";
         private string activeRibbon;
-        private int[] columnWidth = { 100, 200, 200, 100 };
+        private int[] columnWidth = { 15, 30, 39, 15 };
         private string columnData = "[MenuID] as [Menu ID], [Name], [Caption], [ParentID] as [Parent ID]";
         private string tableData = "ApplicationMenu";
         //private string columnData = "[No],[Description],[SearchDescription] as [Search Description], [ItemCategoryID] as [Category ID], [UnitPrice] as [Unit Price], [Blocked]";
@@ -99,9 +99,6 @@ namespace PowerRetail
 
                 dataTable.Rows.Add(row);
             }
-            gridData.DataSource = dataTable;
-            for (int i = 0; i < gridData.Columns.Count; i++)
-                gridData.Columns[i].Width = columnWidth[i];
         }
 
         private void clearDataFilterField()
@@ -190,6 +187,14 @@ namespace PowerRetail
             clearData();
             loadData();
             updateDataFilter();
+        }
+
+        private void gridData_Resize(object sender, EventArgs e)
+        {
+            gridData.DataSource = dataTable;
+            for (int i = 0; i < gridData.Columns.Count; i++)
+                gridData.Columns[i].Width = columnWidth[i] * gridData.Width / 100;
+
         }
     }
 }

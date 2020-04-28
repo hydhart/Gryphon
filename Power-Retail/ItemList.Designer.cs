@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelRibbon = new System.Windows.Forms.Panel();
             this.panelRibbonMenu = new System.Windows.Forms.Panel();
@@ -224,7 +224,7 @@
             // 
             // btnRibbonManageSp3
             // 
-            this.btnRibbonManageSp3.BackColor = System.Drawing.Color.Black;
+            this.btnRibbonManageSp3.BackColor = System.Drawing.Color.Gainsboro;
             this.btnRibbonManageSp3.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRibbonManageSp3.FlatAppearance.BorderSize = 0;
             this.btnRibbonManageSp3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -265,7 +265,7 @@
             // 
             // btnRibbonManageSp2
             // 
-            this.btnRibbonManageSp2.BackColor = System.Drawing.Color.Black;
+            this.btnRibbonManageSp2.BackColor = System.Drawing.Color.Gainsboro;
             this.btnRibbonManageSp2.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRibbonManageSp2.FlatAppearance.BorderSize = 0;
             this.btnRibbonManageSp2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -318,7 +318,7 @@
             // 
             // btnRibbonManageSp1
             // 
-            this.btnRibbonManageSp1.BackColor = System.Drawing.Color.Black;
+            this.btnRibbonManageSp1.BackColor = System.Drawing.Color.Gainsboro;
             this.btnRibbonManageSp1.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRibbonManageSp1.FlatAppearance.BorderSize = 0;
             this.btnRibbonManageSp1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -422,26 +422,31 @@
             this.gridData.AllowUserToDeleteRows = false;
             this.gridData.AllowUserToOrderColumns = true;
             this.gridData.AllowUserToResizeRows = false;
-            this.gridData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridData.ColumnHeadersHeight = 25;
+            this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridData.EnableHeadersVisualStyles = false;
             this.gridData.Location = new System.Drawing.Point(200, 0);
             this.gridData.Name = "gridData";
             this.gridData.ReadOnly = true;
             this.gridData.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gridData.RowHeadersVisible = false;
             this.gridData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridData.ShowEditingIcon = false;
             this.gridData.Size = new System.Drawing.Size(578, 609);
             this.gridData.TabIndex = 1;
             this.gridData.DoubleClick += new System.EventHandler(this.gridData_DoubleClick);
+            this.gridData.Resize += new System.EventHandler(this.gridData_Resize);
             // 
             // panelDataFilter
             // 

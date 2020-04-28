@@ -48,7 +48,7 @@ namespace PowerRetail.classes
                     btnMenu.Click += new EventHandler(formParent.btnMenuClicked);
                     formParent.panelLeft.Controls.Add(btnMenu);
 
-                    SqlDataReader childMenuReader = SQL.ExecCommand("SELECT MenuID,[Name],Caption,ObjectName FROM ApplicationMenu WHERE ParentID = '" + parentMenuReader["MenuID"].ToString() + "' ORDER BY MenuID DESC");
+                    SqlDataReader childMenuReader = SQL.ExecCommand("SELECT MenuID,[Name],Caption,ISNULL(ObjectName, '') ObjectName FROM ApplicationMenu WHERE ParentID = '" + parentMenuReader["MenuID"].ToString() + "' ORDER BY MenuID DESC");
                     if (childMenuReader != null)
                     {
                         while (childMenuReader.Read())
@@ -68,7 +68,7 @@ namespace PowerRetail.classes
                             btnSubmenu.Padding = new Padding(15, 0, 0, 0);
                             btnSubmenu.Size = new Size(220, 30);
                             btnSubmenu.Click += new EventHandler(formParent.btnSubmenuClicked);
-                            btnSubmenu.AccessibleName = childMenuReader["ObjectName"].ToString().ToLower(); ;
+                            btnSubmenu.AccessibleName = childMenuReader["ObjectName"].ToString().ToLower();
                             panelSubmenu.Controls.Add(btnSubmenu);
                         }
                     }
