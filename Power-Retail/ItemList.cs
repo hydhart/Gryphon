@@ -84,8 +84,9 @@ namespace PowerRetail
         private void loadData()
         {
             SqlDataReader reader = SQL.ExecCommand("SELECT " + columnData + " FROM [" + tableData + "]");
-            dataTable = new DataTable();
+            dataTable = new DataTable();            
             DataRow row = dataTable.NewRow();
+            cbDataFilterFields.Items.Clear();            
 
             for (int i = 0; i < reader.FieldCount; i++)
             {
@@ -248,10 +249,11 @@ namespace PowerRetail
 
         private void btnRibbonManageClearFilter_Click(object sender, EventArgs e)
         {
+            clearFilterText();
             clearDataFilter();
             clearDataFilterField();
-            panelDataFilterList.Controls.Clear();
-            clearFilterText();
+            panelDataFilterList.Controls.Clear();            
+            loadData();
         }
 
         private void gridData_DoubleClick(object sender, EventArgs e)
@@ -265,7 +267,7 @@ namespace PowerRetail
             //clearDataFilterField();
             //clearData();
             loadData();
-            updateDataFilter();
+            showFilters();
         }
 
         private void gridData_Resize(object sender, EventArgs e)
