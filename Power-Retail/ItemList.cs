@@ -17,6 +17,8 @@ namespace PowerRetail
         private const string RIBBON_MANAGE = "#MANAGE";
         //private const string RIBBON_NAVIGATE = "#NAVIGATE";
         //private const string RIBBON_REPORT = "#REPORT";
+        private const string PRODUCT_NAME = "Power Retail";
+        private const string FORM_CAPTION = "Item List";
         private string activeRibbon;
         private int[] columnWidth = { 15, 30, 39, 15 };
         private string columnData = "[MenuID] as [Menu ID], [Name], [Caption], [ParentID] as [Parent ID]";
@@ -30,7 +32,7 @@ namespace PowerRetail
         public ItemList()
         {
             InitializeComponent();
-            MainForm.ActiveForm.Text = "Power Retail - Item List";
+            //MainForm.ActiveForm.Text = "Power Retail - Item List";
             hideAllRibbonMenu();
             activeRibbon = "";
             showRibbonMenu(RIBBON_MANAGE);
@@ -40,7 +42,7 @@ namespace PowerRetail
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            MainForm.ActiveForm.Text = "Power Retail";
+            //MainForm.ActiveForm.Text = "Power Retail";
             this.Close();
         }
 
@@ -147,11 +149,11 @@ namespace PowerRetail
             Button btnDeleteFilterItem;
             TextBox txtFilterItem;
 
-            for (int i = 0; i < panelDataFilterList.Controls.Count; i++)
-            {
+            //for (int i = 0; i < panelDataFilterList.Controls.Count; i++)
+            //{
                 //panelDataFilterList.Controls.RemoveAt(i);
                 panelDataFilterList.Controls.Clear();
-            }
+            //}
 
             for (int i=dataFilter.Count()-1; i>=0; i--)
             {
@@ -283,6 +285,19 @@ namespace PowerRetail
             cbDataFilterFields.ResetText();
             cbDataFilterOperator.ResetText();
             txtDataFilterValue.Clear();
+        }
+
+        private void ItemList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MainForm mainForm = ParentForm as MainForm;
+            mainForm.Text = PRODUCT_NAME;
+            mainForm.activeForm = null;
+        }
+
+        private void ItemList_Load(object sender, EventArgs e)
+        {
+            MainForm mainForm = ParentForm as MainForm;
+            mainForm.Text = string.Concat(PRODUCT_NAME, " - ", FORM_CAPTION);
         }
     }
 }

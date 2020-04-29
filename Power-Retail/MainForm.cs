@@ -8,6 +8,7 @@ namespace PowerRetail
 {
     public partial class MainForm : Form
     {
+        public Form activeForm { set; get; }
         public MainForm()
         {
             Application.Run(new Splash());
@@ -59,17 +60,33 @@ namespace PowerRetail
             //showChildForm(new ItemList());
         }
 
-        private Form activeForm = null;
         private void showChildForm(Form childForm)
         {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
-            activeForm.TopLevel = false;
-            activeForm.FormBorderStyle = FormBorderStyle.None;
-            activeForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(activeForm);
-            activeForm.Show();
+            if (childForm != null)
+            {
+                if (activeForm != null)
+                {
+                    if (childForm.Name.ToString() != activeForm.Name.ToString())
+                    {
+                        activeForm.Close();
+                        activeForm = childForm;
+                        activeForm.TopLevel = false;
+                        activeForm.FormBorderStyle = FormBorderStyle.None;
+                        activeForm.Dock = DockStyle.Fill;
+                        panelChildForm.Controls.Add(activeForm);
+                        activeForm.Show();
+                    }
+                }
+                else
+                {
+                    activeForm = childForm;
+                    activeForm.TopLevel = false;
+                    activeForm.FormBorderStyle = FormBorderStyle.None;
+                    activeForm.Dock = DockStyle.Fill;
+                    panelChildForm.Controls.Add(activeForm);
+                    activeForm.Show();
+                }
+            }
         }
 
         private void btnToggleHideShowMenu_Click(object sender, EventArgs e)
