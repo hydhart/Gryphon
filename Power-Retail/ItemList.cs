@@ -30,6 +30,7 @@ namespace PowerRetail
         public ItemList()
         {
             InitializeComponent();
+            MainForm.ActiveForm.Text = "Power Retail - Item List";
             hideAllRibbonMenu();
             activeRibbon = "";
             showRibbonMenu(RIBBON_MANAGE);
@@ -39,6 +40,7 @@ namespace PowerRetail
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            MainForm.ActiveForm.Text = "Power Retail";
             this.Close();
         }
 
@@ -109,8 +111,9 @@ namespace PowerRetail
 
         private void clearData()
         {
-            for(int i=0; i<dataTable.Rows.Count; i++)
+            for (int i = 0; i < dataTable.Rows.Count; i++)
                 dataTable.Rows[i].Delete();
+            //dataTable.Clear();
         }
 
         private void hideShowFilter()
@@ -145,7 +148,8 @@ namespace PowerRetail
 
             for (int i = 0; i < panelDataFilterList.Controls.Count; i++)
             {
-                panelDataFilterList.Controls.RemoveAt(i);
+                //panelDataFilterList.Controls.RemoveAt(i);
+                panelDataFilterList.Controls.Clear();
             }
 
             for (int i=dataFilter.Count()-1; i>=0; i--)
@@ -245,6 +249,9 @@ namespace PowerRetail
         private void btnRibbonManageClearFilter_Click(object sender, EventArgs e)
         {
             clearDataFilter();
+            clearDataFilterField();
+            panelDataFilterList.Controls.Clear();
+            clearFilterText();
         }
 
         private void gridData_DoubleClick(object sender, EventArgs e)
@@ -255,8 +262,8 @@ namespace PowerRetail
 
         private void btnRibbonManageRefresh_Click(object sender, EventArgs e)
         {
-            clearDataFilterField();
-            clearData();
+            //clearDataFilterField();
+            //clearData();
             loadData();
             updateDataFilter();
         }
@@ -267,6 +274,13 @@ namespace PowerRetail
             for (int i = 0; i < gridData.Columns.Count; i++)
                 gridData.Columns[i].Width = columnWidth[i] * gridData.Width / 100;
 
+        }
+
+        private void clearFilterText()
+        {
+            cbDataFilterFields.ResetText();
+            cbDataFilterOperator.ResetText();
+            txtDataFilterValue.Clear();
         }
     }
 }
