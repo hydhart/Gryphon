@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelRibbon = new System.Windows.Forms.Panel();
             this.panelRibbonMenu = new System.Windows.Forms.Panel();
@@ -424,26 +424,26 @@
             this.gridData.AllowUserToResizeRows = false;
             this.gridData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridData.ColumnHeadersHeight = 25;
             this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridData.EnableHeadersVisualStyles = false;
-            this.gridData.Location = new System.Drawing.Point(200, 0);
+            this.gridData.Location = new System.Drawing.Point(250, 0);
             this.gridData.Name = "gridData";
             this.gridData.ReadOnly = true;
             this.gridData.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.gridData.RowHeadersVisible = false;
             this.gridData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridData.ShowEditingIcon = false;
-            this.gridData.Size = new System.Drawing.Size(578, 609);
+            this.gridData.Size = new System.Drawing.Size(528, 609);
             this.gridData.TabIndex = 1;
             this.gridData.DoubleClick += new System.EventHandler(this.gridData_DoubleClick);
             this.gridData.Resize += new System.EventHandler(this.gridData_Resize);
@@ -455,16 +455,16 @@
             this.panelDataFilter.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelDataFilter.Location = new System.Drawing.Point(0, 0);
             this.panelDataFilter.Name = "panelDataFilter";
-            this.panelDataFilter.Size = new System.Drawing.Size(200, 609);
+            this.panelDataFilter.Size = new System.Drawing.Size(250, 609);
             this.panelDataFilter.TabIndex = 0;
             // 
             // panelDataFilterList
             // 
             this.panelDataFilterList.AutoSize = true;
             this.panelDataFilterList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDataFilterList.Location = new System.Drawing.Point(0, 116);
+            this.panelDataFilterList.Location = new System.Drawing.Point(0, 87);
             this.panelDataFilterList.Name = "panelDataFilterList";
-            this.panelDataFilterList.Size = new System.Drawing.Size(200, 0);
+            this.panelDataFilterList.Size = new System.Drawing.Size(250, 0);
             this.panelDataFilterList.TabIndex = 1;
             // 
             // panelDataFilterOperator
@@ -476,14 +476,14 @@
             this.panelDataFilterOperator.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDataFilterOperator.Location = new System.Drawing.Point(0, 0);
             this.panelDataFilterOperator.Name = "panelDataFilterOperator";
-            this.panelDataFilterOperator.Size = new System.Drawing.Size(200, 116);
+            this.panelDataFilterOperator.Size = new System.Drawing.Size(250, 87);
             this.panelDataFilterOperator.TabIndex = 0;
             // 
             // btnDataFilterAdd
             // 
-            this.btnDataFilterAdd.Location = new System.Drawing.Point(141, 88);
+            this.btnDataFilterAdd.Location = new System.Drawing.Point(190, 6);
             this.btnDataFilterAdd.Name = "btnDataFilterAdd";
-            this.btnDataFilterAdd.Size = new System.Drawing.Size(53, 23);
+            this.btnDataFilterAdd.Size = new System.Drawing.Size(56, 49);
             this.btnDataFilterAdd.TabIndex = 7;
             this.btnDataFilterAdd.Text = "Add";
             this.btnDataFilterAdd.UseVisualStyleBackColor = true;
@@ -494,7 +494,7 @@
             this.txtDataFilterValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDataFilterValue.Location = new System.Drawing.Point(4, 62);
             this.txtDataFilterValue.Name = "txtDataFilterValue";
-            this.txtDataFilterValue.Size = new System.Drawing.Size(190, 20);
+            this.txtDataFilterValue.Size = new System.Drawing.Size(241, 20);
             this.txtDataFilterValue.TabIndex = 6;
             // 
             // cbDataFilterOperator
@@ -518,7 +518,7 @@
             this.cbDataFilterFields.FormattingEnabled = true;
             this.cbDataFilterFields.Location = new System.Drawing.Point(3, 6);
             this.cbDataFilterFields.Name = "cbDataFilterFields";
-            this.cbDataFilterFields.Size = new System.Drawing.Size(191, 21);
+            this.cbDataFilterFields.Size = new System.Drawing.Size(181, 21);
             this.cbDataFilterFields.TabIndex = 4;
             // 
             // ItemList
