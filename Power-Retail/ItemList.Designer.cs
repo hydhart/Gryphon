@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelRibbon = new System.Windows.Forms.Panel();
             this.panelRibbonMenu = new System.Windows.Forms.Panel();
@@ -424,14 +424,14 @@
             this.gridData.AllowUserToResizeRows = false;
             this.gridData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridData.ColumnHeadersHeight = 25;
             this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridData.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -530,7 +530,9 @@
             this.Controls.Add(this.panelRibbon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ItemList";
-            this.Text = "Form1";
+            this.Text = "Item List";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ItemList_FormClosing);
+            this.Load += new System.EventHandler(this.ItemList_Load);
             this.panelRibbon.ResumeLayout(false);
             this.panelRibbonMenu.ResumeLayout(false);
             this.panelRibbonMenu.PerformLayout();
