@@ -63,9 +63,9 @@ namespace PowerRetail.classes
         private static void ReadConfig(ref SqlConnectionStringBuilder builder)
         {
             builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "192.168.161.129\\DEV2017";   // update me
+            builder.DataSource = "localhost\\SQL2017";   // update me
             builder.UserID = "sa";              // update me
-            builder.Password = "Pa$$w0rd";      // update me
+            builder.Password = "Sql2012#";      // update me
             builder.InitialCatalog = "Power Retail 0.1";
         }
 
