@@ -49,6 +49,18 @@
     <Compile Include="classes\AppMenu.cs" />
     <Compile Include="classes\AppTools.cs" />
     <Compile Include="classes\SQL.cs" />
+    <Compile Include="components\Ribbon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\Ribbon.Designer.cs">
+      <DependentUpon>Ribbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemCard.Designer.cs">
+      <DependentUpon>ItemCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +87,12 @@
     <Compile Include="Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="components\Ribbon.resx">
+      <DependentUpon>Ribbon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemCard.resx">
+      <DependentUpon>ItemCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItemList.resx">
       <DependentUpon>ItemList.cs</DependentUpon>
     </EmbeddedResource>

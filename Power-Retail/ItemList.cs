@@ -291,13 +291,19 @@ namespace PowerRetail
         {
             MainForm mainForm = ParentForm as MainForm;
             mainForm.Text = PRODUCT_NAME;
-            mainForm.activeForm = null;
+            mainForm.activeListForm  = null;
         }
 
         private void ItemList_Load(object sender, EventArgs e)
         {
             MainForm mainForm = ParentForm as MainForm;
             mainForm.Text = string.Concat(PRODUCT_NAME, " - ", FORM_CAPTION);
+        }
+
+        private void btnRibbonManageNew_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = ParentForm as MainForm;
+            mainForm.showCardForm(new ItemCard());
         }
     }
 }

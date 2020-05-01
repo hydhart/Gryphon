@@ -16,10 +16,12 @@ C:\Users\Admin\Documents\Visual Studio 2015\Projects\PowerRetail\obj\Debug\Power
 \\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.pdb
 \\tsclient\D\My Data\GIT\Gryphon\Power-Retail\bin\Debug\PowerRetail.exe
 \\tsclient\D\My Data\GIT\Gryphon\Power-Retail\bin\Debug\PowerRetail.pdb
-\\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.csprojResolveAssemblyReference.cache
 \\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.ItemList.resources
 \\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.Login.resources
 \\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.MainForm.resources
 \\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.Properties.Resources.resources
 \\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.Splash.resources
 \\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.csproj.GenerateResource.Cache
+\\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.components.Ribbon.resources
+\\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.ItemCard.resources
+\\tsclient\D\My Data\GIT\Gryphon\Power-Retail\obj\Debug\PowerRetail.csprojResolveAssemblyReference.cache

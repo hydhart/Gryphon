@@ -8,7 +8,8 @@ namespace PowerRetail
 {
     public partial class MainForm : Form
     {
-        public Form activeForm { set; get; }
+        public Form activeListForm { set; get; }
+        public Form activeCardForm { set; get; }
         public MainForm()
         {
             Application.Run(new Splash());
@@ -56,35 +57,66 @@ namespace PowerRetail
         {
             Button button = sender as Button;
             string formName = button.AccessibleName;
-            showChildForm(AppTools.GetFormByName(formName));
-            //showChildForm(new ItemList());
+            showListForm(AppTools.GetFormByName(formName));
         }
 
-        private void showChildForm(Form childForm)
+        public void showListForm(Form childForm)
         {
+            if (activeCardForm != null)
+                activeCardForm.Close();
             if (childForm != null)
             {
-                if (activeForm != null)
+                if (activeListForm != null)
                 {
-                    if (childForm.Name.ToString() != activeForm.Name.ToString())
+                    if (childForm.Name.ToString() != activeListForm.Name.ToString())
                     {
-                        activeForm.Close();
-                        activeForm = childForm;
-                        activeForm.TopLevel = false;
-                        activeForm.FormBorderStyle = FormBorderStyle.None;
-                        activeForm.Dock = DockStyle.Fill;
-                        panelChildForm.Controls.Add(activeForm);
-                        activeForm.Show();
+                        activeListForm.Close();
+                        activeListForm = childForm;
+                        activeListForm.TopLevel = false;
+                        activeListForm.FormBorderStyle = FormBorderStyle.None;
+                        activeListForm.Dock = DockStyle.Fill;
+                        panelChildForm.Controls.Add(activeListForm);
+                        activeListForm.Show();
                     }
                 }
                 else
                 {
-                    activeForm = childForm;
-                    activeForm.TopLevel = false;
-                    activeForm.FormBorderStyle = FormBorderStyle.None;
-                    activeForm.Dock = DockStyle.Fill;
-                    panelChildForm.Controls.Add(activeForm);
-                    activeForm.Show();
+                    activeListForm = childForm;
+                    activeListForm.TopLevel = false;
+                    activeListForm.FormBorderStyle = FormBorderStyle.None;
+                    activeListForm.Dock = DockStyle.Fill;
+                    panelChildForm.Controls.Add(activeListForm);
+                    activeListForm.Show();
+                }
+            }
+        }
+        public void showCardForm(Form childForm)
+        {
+            if (childForm != null)
+            {
+                if (activeCardForm != null)
+                {
+                    if (childForm.Name.ToString() != activeCardForm.Name.ToString())
+                    {
+                        activeCardForm.Close();
+                        activeCardForm = childForm;
+                        activeCardForm.TopLevel = false;
+                        activeCardForm.FormBorderStyle = FormBorderStyle.None;
+                        activeCardForm.Dock = DockStyle.Fill;
+                        panelChildForm.Controls.Add(activeCardForm);
+                        activeCardForm.Show();
+                        activeCardForm.BringToFront();
+                    }
+                }
+                else
+                {
+                    activeCardForm = childForm;
+                    activeCardForm.TopLevel = false;
+                    activeCardForm.FormBorderStyle = FormBorderStyle.None;
+                    activeCardForm.Dock = DockStyle.Fill;
+                    panelChildForm.Controls.Add(activeCardForm);
+                    activeCardForm.Show();
+                    activeCardForm.BringToFront();
                 }
             }
         }
