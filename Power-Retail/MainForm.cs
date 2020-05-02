@@ -12,8 +12,8 @@ namespace PowerRetail
         public Form activeCardForm { set; get; }
         public MainForm()
         {
-            Application.Run(new Splash());
-            Application.Run(new Login());
+            //Application.Run(new Splash());
+            //Application.Run(new Login());
 
             InitializeComponent();
 

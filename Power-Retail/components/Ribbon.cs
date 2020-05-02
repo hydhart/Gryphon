@@ -34,24 +34,29 @@ namespace PowerRetail.components
         public Ribbon()
         {
             InitializeComponent();
+            activeRibbon = "";
         }
 
         public void hideAllRibbonMenu()
         {
+            string currentActiveRibbon="";
             foreach (Control c in panelRibbonMenu.Controls)
             {
                 if (c is Panel)
                 {
                     if (c.Equals(panelRibbonMenu.Controls[panelRibbonMenu.Controls.Count - 1]))
                     {
-                        activeRibbon = c.Tag.ToString();
+                        currentActiveRibbon = c.Tag.ToString();
                         c.Visible = true;
                     }
                     else
                         c.Visible = false;
                 }
             }
+            if(currentActiveRibbon!="")
+                showRibbonMenu(currentActiveRibbon);
         }
+
         private void showRibbonMenu(string newActiveRibbon)
         {
             if (newActiveRibbon != activeRibbon)

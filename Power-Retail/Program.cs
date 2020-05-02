@@ -13,8 +13,6 @@ namespace PowerRetail
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Splash(new MainForm()));
-            //Application.Run(new Splash());
             Application.Run(new MainForm());
         }
     }

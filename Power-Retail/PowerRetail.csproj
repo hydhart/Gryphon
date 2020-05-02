@@ -49,6 +49,12 @@
     <Compile Include="classes\AppMenu.cs" />
     <Compile Include="classes\AppTools.cs" />
     <Compile Include="classes\SQL.cs" />
+    <Compile Include="components\DBGridList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="components\DBGridList.Designer.cs">
+      <DependentUpon>DBGridList.cs</DependentUpon>
+    </Compile>
     <Compile Include="components\Ribbon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +93,15 @@
     <Compile Include="Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="components\DBGridList.resx">
+      <DependentUpon>DBGridList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="components\Ribbon.resx">
       <DependentUpon>Ribbon.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
